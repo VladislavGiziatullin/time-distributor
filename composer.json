@@ -1,0 +1,31 @@
+{
+    "name": "vladgtr/time-distributor",
+    "description": "The time distributor with schedule",
+    "keywords": ["time", "distribute", "distributor", "distribution"],
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "support": {},
+    "authors": [
+        {
+            "name": "Vlad",
+            "email": "vladgtr2@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "vladgtr\\TimeDistributor\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "vladgtr\\TimeDistributor\\tests\\": "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "@stable"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests",
+        "coverage": "php -dxdebug.coverage_enable=1 -dxdebug.mode=coverage vendor/bin/phpunit --coverage-clover .phpunit.coverage.report.xml --whitelist src --no-configuratio tests --cache-result-file=.phpunit.result.cache"
+    }
+}
